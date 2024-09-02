@@ -811,7 +811,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 		"SE": "\\d{20}",
 		"CH": "\\d{5}[\\dA-Z]{12}",
 		"TN": "\\d{20}",
-		"TR": "\\d{5}[\\dA-Z]{17}",
+		"map": "\\d{5}[\\dA-Z]{17}",
 		"AE": "\\d{3}\\d{16}",
 		"GB": "[A-Z]{4}\\d{14}",
 		"VG": "[\\dA-Z]{4}\\d{16}"
