@@ -6,7 +6,7 @@
 
 @await Component.InvokeAsync("Chart", new { chartType = "bar" })
 
-
+@await Component.InvokeAsync("Alert", new AlertViewModel { AlertType=Ecboard.Enum.Enum_AlertType.Advanced, Color=Ecboard.Enum.Enum_Color.danger, Description="Test", Name="AAAAA" })
 
 <div class="row row-deck row-cards">
 

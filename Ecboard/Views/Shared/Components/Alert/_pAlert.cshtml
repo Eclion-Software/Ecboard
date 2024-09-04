@@ -1,0 +1,69 @@
+﻿@model AlertViewModel
+
+@{
+    string alertId = "alert-" + EcStringHelper.RandomString(12);
+    string alertIcon;
+
+    switch (Model.Color)
+    {
+        case Ecboard.Enum.Enum_Color.success:
+            alertIcon = "check";
+            break;
+
+        case Ecboard.Enum.Enum_Color.warning:
+            alertIcon = "triangle";
+            break;
+
+        case Ecboard.Enum.Enum_Color.info:
+            alertIcon = "circle";
+            break;
+
+        case Ecboard.Enum.Enum_Color.primary:
+            alertIcon = "assembly";
+            break;
+
+        case Ecboard.Enum.Enum_Color.danger:
+            alertIcon = "exclamation-mark";
+            break;
+
+        case Ecboard.Enum.Enum_Color.secondary:
+            alertIcon = "circle";
+            break;
+
+        default:
+            alertIcon = "assembly";
+            break;
+    }
+}
+
+
+<style>
+    .alert{
+        position: fixed;
+        z-index: 50;
+        top: 1rem;
+        right: 1rem;
+    }
+</style>
+
+
+@switch (Model.AlertType)
+{
+    case Ecboard.Enum.Enum_AlertType.Advanced:
+        <div class="alert alert-@(Model.Color.ToString()) bg-white" id="@alertId" role="alert">
+            <div class="d-flex">
+                <div>
+                    <i class="ti ti-2x ti-@(alertIcon) icon alert-icon"></i>
+                </div>
+                <div>
+                    <h4 class="alert-title">@Model.Name</h4>
+                    <div class="text-secondary">@Model.Description</div>
+                </div>
+            </div>
+        </div>
+        break;
+
+    default:
+        break;
+}
+
