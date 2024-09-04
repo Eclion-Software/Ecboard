@@ -1,0 +1,38 @@
+﻿@model IChartOptions
+
+<div class="chart-container">
+    <div id="@Model.ChartId" style="min-height: 201.9px;"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.ApexCharts) {
+                var options = {
+                    chart: {
+                        type: '@Model.ChartType',
+                        height: 240,
+                    },
+
+                    series: @Html.Raw(Json.Serialize(Model.ChartType == "bar"
+             ? new List<object> { new { name = "Series", data = Model.Series } }
+             : Model.Series)), 
+             
+             
+             // Bar chart için özel yapı
+                    labels: @Html.Raw(Json.Serialize(Model.Labels)), // Pie chart için etiketler
+
+
+                    xaxis: {
+                        categories: @Html.Raw(Json.Serialize(Model.ChartType == "bar"
+                            ? Model.Labels
+                            : new List<string>())) // Bar chart için etiketler
+                            },
+
+
+                    colors: @Html.Raw(Json.Serialize(Model.Colors)),
+                    tooltip: { theme: 'dark' }
+                };
+
+                new ApexCharts(document.getElementById('@Model.ChartId'), options).render();
+            }
+        });
+    </script>
+</div>

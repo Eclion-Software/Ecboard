@@ -2,6 +2,10 @@
     ViewData["Title"] = "Dashboard";
 }
 
+@await Component.InvokeAsync("Chart", new { chartType = "pie" })
+
+@await Component.InvokeAsync("Chart", new { chartType = "bar" })
+
 
 
 <div class="row row-deck row-cards">
