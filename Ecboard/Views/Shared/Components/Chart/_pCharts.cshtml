@@ -1,38 +1,34 @@
-﻿@model IChartOptions
+﻿@model ChartOptions
 
 <div class="chart-container">
     <div id="@Model.ChartId" style="min-height: 201.9px;"></div>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (window.ApexCharts) {
-                var options = {
-                    chart: {
-                        type: '@Model.ChartType',
-                        height: 240,
-                    },
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.ApexCharts) {
+        console.log('Model Series:', @Html.Raw(Json.Serialize(Model.Series)));
+        console.log('Model Labels:', @Html.Raw(Json.Serialize(Model.Labels)));
+        console.log('Model ChartType:', @Html.Raw(Json.Serialize(Model.ChartType)));
 
-                    series: @Html.Raw(Json.Serialize(Model.ChartType == "bar"
-             ? new List<object> { new { name = "Series", data = Model.Series } }
-             : Model.Series)), 
-             
-             
-             // Bar chart için özel yapı
-                    labels: @Html.Raw(Json.Serialize(Model.Labels)), // Pie chart için etiketler
+        var options = {
+            chart: {
+                type: '@Model.ChartType',
+                height: 240
+            },
+            series: @Html.Raw(Json.Serialize(Model.Series)),
+            labels: @Html.Raw(Json.Serialize(Model.Labels)),
+            xaxis: {
+                categories: @Html.Raw(Json.Serialize(Model.Labels))
+            },
+            colors: @Html.Raw(Json.Serialize(Model.Colors)),
+            tooltip: { theme: 'dark' }
+        };
 
+        console.log('Options:', options);  // Kontrol amaçlı
 
-                    xaxis: {
-                        categories: @Html.Raw(Json.Serialize(Model.ChartType == "bar"
-                            ? Model.Labels
-                            : new List<string>())) // Bar chart için etiketler
-                            },
+        new ApexCharts(document.getElementById('@Model.ChartId'), options).render();
+    }
+});
 
-
-                    colors: @Html.Raw(Json.Serialize(Model.Colors)),
-                    tooltip: { theme: 'dark' }
-                };
-
-                new ApexCharts(document.getElementById('@Model.ChartId'), options).render();
-            }
-        });
     </script>
 </div>

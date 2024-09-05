@@ -1,3 +1,4 @@
+using Ecboard.Interfaces.Chart;
 using Ecboard.Services;
 using Ecboard.ViewModel.Interface;
 
