@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Ecboard.Services;
-using Ecboard.ViewModel.Interface;
 using Ecboard.ViewModels;
 using Ecboard.Enum;
 

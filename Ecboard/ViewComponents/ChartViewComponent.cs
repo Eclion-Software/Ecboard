@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Ecboard.Services;
-using Ecboard.ViewModel.Interface;
+using Ecboard.ViewModels._PartialViews.Chart;
 
 namespace Ecboard.ViewComponents
 {
@@ -13,9 +13,9 @@ namespace Ecboard.ViewComponents
             _chartOptionsService = chartOptionsService;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync(string chartType)
+        public async Task<IViewComponentResult> InvokeAsync(BaseChartViewModel model)
         {
-            var chartData = _chartOptionsService.GetChartOptions(chartType);
+            var chartData = _chartOptionsService.GetChartOptions(model);
 
             return View("_pCharts", chartData);
         }

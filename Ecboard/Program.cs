@@ -1,6 +1,4 @@
-using Ecboard.Interfaces.Chart;
 using Ecboard.Services;
-using Ecboard.ViewModel.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +7,6 @@ builder.Services.AddControllersWithViews();
 
 
 builder.Services.AddScoped<ChartOptionsService>(); // Servisleri ekleyin
-
-
-builder.Services.AddScoped<IChartOptions, ChartOptions>(); // IChartOptions'ý ve ChartOptions'ý ekleyin
 
 var app = builder.Build();
 

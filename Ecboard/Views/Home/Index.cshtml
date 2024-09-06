@@ -1,15 +1,29 @@
 ﻿@using Ecboard.Enum
 @using Ecboard.ViewComponents
-@{
-    ViewData["Title"] = "Dashboard";
+@using Ecboard.ViewModels._PartialViews.Chart
 
-}
+@await Component.InvokeAsync(typeof(ChartViewComponent), new PieChartViewModel()
+{
+    ChartId = "chart-" + EcStringHelper.RandomString(12),
+    ChartType = "pie",
+    Colors = new List<string> { "#008FFB" },
+    Labels = new List<string> { "Direct", "Affilliate", "E-mail", "Other" },
+    Series = new List<int> { 12, 45, 67, 23}
+});
 
-@await Component.InvokeAsync("Chart", new { chartType = "pie" })
-@await Component.InvokeAsync("Chart", new { chartType = "bar" })
-
-@await Component.InvokeAsync("Chart", new { chartType = "line" })
-@await Component.InvokeAsync("Chart", new { chartType = "area" })
+@await Component.InvokeAsync(typeof(ChartViewComponent), new DefaultChartViewModel()
+{
+    ChartId = "chart-" + EcStringHelper.RandomString(12),
+    ChartType = "line",
+    Colors = new List<string> { "#008FFB" },
+    Labels = new List<string> { "Jan", "Feb", "Mar" },
+    Series = new List<ChartSeries> { 
+        new ChartSeries(){
+            Name = "Test1",
+            Data = new List<int> {12, 56, 73}
+        }
+    }
+});
 
 @await Component.InvokeAsync(typeof(AlertViewComponent), new { name = "Deneme1234", color = Enum_Color.danger })
 
