@@ -43,12 +43,32 @@
         z-index: 50;
         top: 1rem;
         right: 1rem;
+        background: #eee;
     }
 </style>
 
 
 @switch (Model.AlertType)
 {
+    case Ecboard.Enum.Enum_AlertType.Default:
+        <div class="alert alert-@(Model.Color.ToString())" id="@alertId" role="alert">
+            @Model.Name
+        </div>
+        break;
+
+    case Ecboard.Enum.Enum_AlertType.WithIcon:
+        <div class="alert alert-@(Model.Color.ToString())" id="@alertId" role="alert">
+            <div class="d-flex">
+                <div>
+                    <i class="ti ti-2x ti-@(alertIcon) icon alert-icon"></i>
+                </div>
+                <div>
+                    @Model.Name
+                </div>
+            </div>
+        </div>
+        break;
+
     case Ecboard.Enum.Enum_AlertType.Advanced:
         <div class="alert alert-@(Model.Color.ToString()) bg-white" id="@alertId" role="alert">
             <div class="d-flex">
@@ -56,10 +76,28 @@
                     <i class="ti ti-2x ti-@(alertIcon) icon alert-icon"></i>
                 </div>
                 <div>
-                    <h4 class="alert-title">@Model.Name</h4>
-                    <div class="text-secondary">@Model.Description</div>
+                    <h4 class="alert-title">
+                        @Model.Name
+                    </h4>
+                    <div class="text-secondary">
+                        @Model.Description
+                    </div>
                 </div>
             </div>
+        </div>
+        break;
+
+    case Ecboard.Enum.Enum_AlertType.Important:
+        <div class="alert alert-important alert-@(Model.Color.ToString()) alert-dismissible" id="@alertId" role="alert">
+            <div class="d-flex">
+                <div>
+                    <i class="ti ti-2x ti-@(alertIcon) icon alert-icon"></i>
+                </div>
+                <div>
+                    @Model.Name
+                </div>
+            </div>
+            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
         </div>
         break;
 

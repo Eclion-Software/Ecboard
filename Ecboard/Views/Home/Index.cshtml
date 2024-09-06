@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Ecboard.Enum
+@using Ecboard.ViewComponents
+@{
     ViewData["Title"] = "Dashboard";
 
 }
@@ -9,7 +11,7 @@
 @await Component.InvokeAsync("Chart", new { chartType = "line" })
 @await Component.InvokeAsync("Chart", new { chartType = "area" })
 
-@await Component.InvokeAsync("Alert", new AlertViewModel { AlertType=Ecboard.Enum.Enum_AlertType.Advanced, Color=Ecboard.Enum.Enum_Color.danger, Description="Test", Name="AAAAA" })
+@await Component.InvokeAsync(typeof(AlertViewComponent), new { name = "Deneme1234", color = Enum_Color.danger })
 
 <div class="row row-deck row-cards">
 

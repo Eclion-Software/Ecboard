@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\okanc\\OneDrive\\Masaüstü\\Ecboard\\Ecboard\\Ecboard.csproj": {}
+    "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\Ecboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\okanc\\OneDrive\\Masaüstü\\Ecboard\\Ecboard\\Ecboard.csproj": {
+    "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\Ecboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\okanc\\OneDrive\\Masaüstü\\Ecboard\\Ecboard\\Ecboard.csproj",
+        "projectUniqueName": "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\Ecboard.csproj",
         "projectName": "Ecboard",
-        "projectPath": "C:\\Users\\okanc\\OneDrive\\Masaüstü\\Ecboard\\Ecboard\\Ecboard.csproj",
-        "packagesPath": "C:\\Users\\okanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\okanc\\OneDrive\\Masaüstü\\Ecboard\\Ecboard\\obj\\",
+        "projectPath": "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\Ecboard.csproj",
+        "packagesPath": "C:\\Users\\LulQu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\okanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LulQu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
