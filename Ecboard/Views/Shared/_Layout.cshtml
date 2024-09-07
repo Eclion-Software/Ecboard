@@ -40,6 +40,10 @@
 
         <div class="page-wrapper">
             <div class="page-body">
+                <div class="position-fixed top-2 d-flex flex-column align-items-end" style="right: 1rem; z-index: 100">
+                    @RenderSection("Alerts", required: false)
+                </div>
+
                 <div class="container-xl">
 
                     <div class="row g-2 align-items-center mb-5">

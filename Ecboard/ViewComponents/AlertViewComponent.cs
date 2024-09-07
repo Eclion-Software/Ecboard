@@ -7,34 +7,25 @@ namespace Ecboard.ViewComponents
 {
     public class AlertViewComponent : ViewComponent
     {
-        //public async Task<IViewComponentResult> InvokeAsync(AlertViewModel model)
-        //{
-
-        //    return View("_pAlert", model);
-        //}
-
-        public async Task<IViewComponentResult> InvokeAsync(string name, Enum_Color color)
+        public async Task<IViewComponentResult> InvokeAsync(object _model, Enum_Color? color)
         {
-
-            return View("_pAlert", new AlertViewModel()
+            if (_model is AlertViewModel model)
             {
-                AlertType = Enum.Enum_AlertType.Default,
-                Color = color,
-                Description = "",
-                Name = name
-            });
+                return View("_pAlert", model);
+            }
+            else if (_model is string name)
+            {
+                var alertViewModel = new AlertViewModel()
+                {
+                    AlertType = Enum.Enum_AlertType.Default,
+                    Color = color ?? Enum.Enum_Color.secondary,
+                    Description = "",
+                    Name = name
+                };
+                return View("_pAlert", alertViewModel);
+            }
+
+            throw new ArgumentException("Invalid parameters provided.");
         }
-
-        //public async Task<IViewComponentResult> InvokeAsync(string name)
-        //{
-
-        //    return View("_pAlert", new AlertViewModel()
-        //    {
-        //        AlertType = Enum.Enum_AlertType.Default,
-        //        Color = Enum.Enum_Color.secondary,
-        //        Description = "",
-        //        Name = name
-        //    });
-        //}
     }
 }

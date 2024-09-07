@@ -25,7 +25,11 @@
     }
 });
 
-@await Component.InvokeAsync(typeof(AlertViewComponent), new { name = "Deneme1234", color = Enum_Color.danger })
+@section Alerts{
+    @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = "Default Alert", color = Enum_Color.danger })
+    @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = new AlertViewModel { AlertType = Enum_AlertType.Important, Color = Enum_Color.success, Name = "Important Alert" } })
+    @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = new AlertViewModel { AlertType = Enum_AlertType.Important, Color = Enum_Color.danger, Name = "Important Alert" } })
+}
 
 <div class="row row-deck row-cards">
 
@@ -274,6 +278,7 @@
 
 
 </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         window.ApexCharts && (new ApexCharts(document.getElementById('chart-revenue-bg'), {
@@ -459,8 +464,6 @@
         })).render();
     });
 </script>
-
-
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -572,3 +575,5 @@
     });
 
 </script>
+
+

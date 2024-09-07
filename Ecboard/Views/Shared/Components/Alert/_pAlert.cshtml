@@ -38,11 +38,21 @@
 
 
 <style>
-    .alert{
-        position: fixed;
-        z-index: 50;
-        top: 1rem;
-        right: 1rem;
+    /* Animasyon eklenmeden önce öğeler ekranın dışında başlayacak */
+    .alert {
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+    }
+
+        /* Animasyon eklendiğinde öğeler içeri doğru kayacak */
+    .alert.show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+  .alert-bg{
         background: #eee;
     }
 </style>
@@ -51,13 +61,13 @@
 @switch (Model.AlertType)
 {
     case Ecboard.Enum.Enum_AlertType.Default:
-        <div class="alert alert-@(Model.Color.ToString())" id="@alertId" role="alert">
+        <div class="alert alert-@(Model.Color.ToString()) alert-bg" id="@alertId" role="alert">
             @Model.Name
         </div>
         break;
 
     case Ecboard.Enum.Enum_AlertType.WithIcon:
-        <div class="alert alert-@(Model.Color.ToString())" id="@alertId" role="alert">
+        <div class="alert alert-@(Model.Color.ToString()) alert-bg" id="@alertId" role="alert">
             <div class="d-flex">
                 <div>
                     <i class="ti ti-2x ti-@(alertIcon) icon alert-icon"></i>
@@ -70,7 +80,7 @@
         break;
 
     case Ecboard.Enum.Enum_AlertType.Advanced:
-        <div class="alert alert-@(Model.Color.ToString()) bg-white" id="@alertId" role="alert">
+        <div class="alert alert-@(Model.Color.ToString()) bg-white alert-bg" id="@alertId" role="alert">
             <div class="d-flex">
                 <div>
                     <i class="ti ti-2x ti-@(alertIcon) icon alert-icon"></i>
@@ -105,3 +115,11 @@
         break;
 }
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const alert = document.querySelector('#@alertId');
+        setTimeout(() => {
+            alert.classList.add('show');
+        }, 100);
+    });
+</script>
