@@ -1,4 +1,5 @@
 ﻿@using Ecboard.Enum
+@using Ecboard.TagHelpers
 @using Ecboard.ViewComponents
 @using Ecboard.ViewModels._PartialViews.Chart
 
@@ -9,7 +10,7 @@
     Colors = new List<string> { "#008FFB" },
     Labels = new List<string> { "Direct", "Affilliate", "E-mail", "Other" },
     Series = new List<int> { 12, 45, 67, 23}
-});
+})
 
 @await Component.InvokeAsync(typeof(ChartViewComponent), new DefaultChartViewModel()
 {
@@ -23,13 +24,15 @@
             Data = new List<int> {12, 56, 73}
         }
     }
-});
+})
 
 @section Alerts{
     @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = "Default Alert", color = Enum_Color.danger })
     @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = new AlertViewModel { AlertType = Enum_AlertType.Important, Color = Enum_Color.success, Name = "Important Alert" } })
     @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = new AlertViewModel { AlertType = Enum_AlertType.Important, Color = Enum_Color.danger, Name = "Important Alert" } })
 }
+
+<card card-type="default" card-title="Card Title 1" card-description="Simple card"></card>
 
 <div class="row row-deck row-cards">
 
