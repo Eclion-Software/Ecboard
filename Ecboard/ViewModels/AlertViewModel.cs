@@ -1,4 +1,4 @@
-﻿using Ecboard.Enum;
+﻿using Ecboard.Enums;
 
 namespace Ecboard.ViewModels
 {

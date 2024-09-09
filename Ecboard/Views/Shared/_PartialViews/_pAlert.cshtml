@@ -6,27 +6,27 @@
 
     switch (Model.Color)
     {
-        case Ecboard.Enum.Enum_Color.success:
+        case Ecboard.Enums.Enum_Color.success:
             alertIcon = "check";
             break;
 
-        case Ecboard.Enum.Enum_Color.warning:
+        case Ecboard.Enums.Enum_Color.warning:
             alertIcon = "triangle";
             break;
 
-        case Ecboard.Enum.Enum_Color.info:
+        case Ecboard.Enums.Enum_Color.info:
             alertIcon = "circle";
             break;
 
-        case Ecboard.Enum.Enum_Color.primary:
+        case Ecboard.Enums.Enum_Color.primary:
             alertIcon = "assembly";
             break;
 
-        case Ecboard.Enum.Enum_Color.danger:
+        case Ecboard.Enums.Enum_Color.danger:
             alertIcon = "exclamation-mark";
             break;
 
-        case Ecboard.Enum.Enum_Color.secondary:
+        case Ecboard.Enums.Enum_Color.secondary:
             alertIcon = "circle";
             break;
 
@@ -60,13 +60,13 @@
 
 @switch (Model.AlertType)
 {
-    case Ecboard.Enum.Enum_AlertType.Default:
+    case Ecboard.Enums.Enum_AlertType._default:
         <div class="alert alert-@(Model.Color.ToString()) alert-bg" id="@alertId" role="alert">
             @Model.Name
         </div>
         break;
 
-    case Ecboard.Enum.Enum_AlertType.WithIcon:
+    case Ecboard.Enums.Enum_AlertType.with_icon:
         <div class="alert alert-@(Model.Color.ToString()) alert-bg" id="@alertId" role="alert">
             <div class="d-flex">
                 <div>
@@ -79,7 +79,7 @@
         </div>
         break;
 
-    case Ecboard.Enum.Enum_AlertType.Advanced:
+    case Ecboard.Enums.Enum_AlertType.advanced:
         <div class="alert alert-@(Model.Color.ToString()) bg-white alert-bg" id="@alertId" role="alert">
             <div class="d-flex">
                 <div>
@@ -97,7 +97,7 @@
         </div>
         break;
 
-    case Ecboard.Enum.Enum_AlertType.Important:
+    case Ecboard.Enums.Enum_AlertType.important:
         <div class="alert alert-important alert-@(Model.Color.ToString()) alert-dismissible" id="@alertId" role="alert">
             <div class="d-flex">
                 <div>

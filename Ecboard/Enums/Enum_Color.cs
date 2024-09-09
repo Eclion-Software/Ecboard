@@ -1,4 +1,4 @@
-﻿namespace Ecboard.Enum
+﻿namespace Ecboard.Enums
 {
     public enum Enum_Color
     {

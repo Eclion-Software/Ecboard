@@ -1,4 +1,4 @@
-﻿@using Ecboard.Enum
+﻿@using Ecboard.Enums
 @using Ecboard.TagHelpers
 @using Ecboard.ViewComponents
 @using Ecboard.ViewModels._PartialViews.Chart
@@ -27,12 +27,14 @@
 })
 
 @section Alerts{
-    @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = "Default Alert", color = Enum_Color.danger })
-    @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = new AlertViewModel { AlertType = Enum_AlertType.Important, Color = Enum_Color.success, Name = "Important Alert" } })
-    @await Component.InvokeAsync(typeof(AlertViewComponent), new { _model = new AlertViewModel { AlertType = Enum_AlertType.Important, Color = Enum_Color.danger, Name = "Important Alert" } })
+    <alert alert-type="@Enum_AlertType._default" name="Örnek Alert"></alert>
 }
 
-<card card-type="default" card-title="Card Title 1" card-description="Simple card"></card>
+<div class="row row-cards my-4">
+    <div class="col-md-6 col-lg-3">
+        <card card-type="@Enum_CardType.with_edge_border" title="Card Title 1" description="Simple card" icon="apple" direction="right" color="success"></card>
+    </div>
+</div>
 
 <div class="row row-deck row-cards">
 

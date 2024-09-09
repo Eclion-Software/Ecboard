@@ -1,24 +1,211 @@
 ﻿@model CardViewModel
 
-<div class="col-md-6 col-lg-3">
-    <div class="card @(Model.CardType == "borderless" ? "card-borderless" : "")" style="background-color: @(Model.CardColor ?? "white")">
-        @if (!string.IsNullOrEmpty(Model.CardTitle))
-        {
-            <div class="card-header @(Model.CardHeaderClass)">
-                <h3 class="card-title">
-                    @Model.CardTitle
-                    @if (!string.IsNullOrEmpty(Model.CardSubtitle))
-                    {
-                        <span class="card-subtitle">@Model.CardSubtitle</span>
-                    }
-                </h3>
+@{
+
+}
+
+@*  *@
+
+@switch (Model.CardType)
+{
+    case Ecboard.Enums.Enum_CardType._default:
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">@Model.Title</h3>
             </div>
-        }
-        <div class="card-body">
-            @if (!string.IsNullOrEmpty(Model.CardDescription))
-            {
-                <p>@Model.CardDescription</p>
-            }
+            <div class="card-body">@Model.Description</div>
         </div>
-    </div>
-</div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.default_no_border:
+        <div class="card card-borderless">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <div>@Model.Description</div>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.default_subtitle:
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">@Model.Title <span class="card-subtitle">@Model.Subtitle</span></h3>
+            </div>
+            <div class="card-body">@Model.Description</div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.default_hover:
+        <div class="col-md-6 col-lg-3">
+            <a href="@(String.IsNullOrEmpty(Model.Link) ? "#" : Model.Link)" class="card card-link">
+                <div class="card-body">@Model.Title</div>
+            </a>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.active:
+        <div class="card card-active">
+            <div class="card-body">
+                <p>@Model.Title</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.intactive:
+        <div class="card card-inactive">
+            <div class="card-body">
+                <p>@Model.Title</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_icon_bg:
+        <div class="card">
+            <div class="card-stamp">
+                <div class="card-stamp-icon bg-@(Model.Color.ToString())">
+                    <i class="ti ti-@(String.IsNullOrEmpty(Model.Icon) ? "check" : Model.Icon) icon" style="font-size: 5rem;"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_bg_color:
+        <div class="card bg-@(Model.Color.ToString())-lt">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_icon_and_color:
+        <div class="card bg-@(Model.Color) text-@(Model.Color.ToString())-fg">
+            <div class="card-stamp">
+                <div class="card-stamp-icon bg-white text-@(Model.Color.ToString())">
+                    <i class="ti ti-@(String.IsNullOrEmpty(Model.Icon) ? "check" : Model.Icon) icon" style="font-size: 5rem;"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p>@Model.Description</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_edge_border:
+        <div class="card">
+            <div class="card-status-@(Model.Direction == Ecboard.Enums.Enum_Direction.left ? "start" : Model.Direction == Ecboard.Enums.Enum_Direction.right ? "end" : Model.Direction.ToString()) bg-@(Model.Color.ToString())"></div>
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_ribbon:
+        <div class="card">
+            <div class="ribbon ribbon-@(Model.Direction.ToString()) bg-@(Model.Color)">
+                <i class="ti ti-@(String.IsNullOrEmpty(Model.Icon) ? "check" : Model.Icon) icon"></i>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_proggress:
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+            <div class="progress card-progress" style="height: 0.6rem;">
+                <div class="progress-bar bg-@(Model.Color.ToString())" style="width: @(Model.Progress)%" role="progressbar" aria-valuenow="@(Model.Progress)" aria-valuemin="0" aria-valuemax="100" aria-label="@(Model.Progress)% Complete">
+                    <span class="visually-show">@(Model.Progress)% Complete</span>
+                </div>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.stacked:
+        <div class="card card-stacked">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_image:
+        <div class="card">
+            @if (Model.Direction == Ecboard.Enums.Enum_Direction.left || Model.Direction == Ecboard.Enums.Enum_Direction.right)
+            {
+                <div class="row row-0">
+                    <div class="col-3 @(Model.Direction == Ecboard.Enums.Enum_Direction.right ? "order-md-last" : "")">
+                        <img src="@Model.Image" class="w-100 h-100 object-cover card-img-start" alt="Card Image" />
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <h3 class="card-title">@Model.Title</h3>
+                            <p class="text-secondary">@Model.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                @if (Model.Direction == Ecboard.Enums.Enum_Direction.top)
+                {
+                    <img src="@Model.Image" class="w-100 h-100 object-cover card-img-start" alt="Card Image" />
+                }
+                <div class="card-body">
+                    <h3 class="card-title">@Model.Title</h3>
+                    <p class="text-secondary">@Model.Description</p>
+                </div>
+                if (Model.Direction == Ecboard.Enums.Enum_Direction.bottom)
+                {
+                    <img src="@Model.Image" class="w-100 h-100 object-cover card-img-start" alt="Card Image" />
+                }
+            }
+            
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_footer:
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+            <div class="card-footer">
+                @Model.Footer
+            </div>
+        </div>
+        break;
+
+    case Ecboard.Enums.Enum_CardType.with_button:
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                <p class="text-secondary">@Model.Description</p>
+            </div>
+            <div class="card-footer">
+                <a href="@Model.Link" class="btn btn-@(Model.Color)">@Model.ButtonText</a>
+            </div>
+        </div>
+        break;
+
+    default:
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">@Model.Title</h3>
+            </div>
+            <div class="card-body">@Model.Description</div>
+        </div>
+        break;
+}
