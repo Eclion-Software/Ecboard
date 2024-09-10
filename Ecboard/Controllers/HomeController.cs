@@ -1,3 +1,4 @@
+using Ecboard.Controllers.Actions.Home;
 using Ecboard.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -18,8 +19,10 @@ namespace Ecboard.Controllers
 			return View();
 		}
 
+        public IActionResult ExampleAction(int id) => this.CustomAction(id);
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
