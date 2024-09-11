@@ -17,75 +17,91 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ecboard
 build_property.RootNamespace = Ecboard
-build_property.ProjectDir = C:\Users\LulQu\source\repos\Ecboard\Ecboard\
+build_property.ProjectDir = C:\Users\okanc\OneDrive\Masaüstü\Ecboard\Ecboard\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\LulQu\source\repos\Ecboard\Ecboard
+build_property.MSBuildProjectDirectory = C:\Users\okanc\OneDrive\Masaüstü\Ecboard\Ecboard
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Home/ExampleAction.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Finance/AccountTransactions_Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxBY2NvdW50VHJhbnNhY3Rpb25zX0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Finance/Invoice_Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxJbnZvaWNlX0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Finance/PlannedPayments_Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxQbGFubmVkUGF5bWVudHNfSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Finance/Print_Invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxQcmludF9JbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Finance/SalaryPayments_Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxTYWxhcnlQYXltZW50c19JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Home/ExampleAction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeGFtcGxlQWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Home/Index.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Invoice/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Invoice/PrintInvoice.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Invoice/PrintInvoice.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxQcmludEludm9pY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/Components/Chart/_pCharts.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/Components/Chart/_pCharts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2hhcnRcX3BDaGFydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/Error.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainFooter.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlld3NcQ29yZVxfcE1haW5Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainHeader.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlld3NcQ29yZVxfcE1haW5IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainScripts.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainScripts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlld3NcQ29yZVxfcE1haW5TY3JpcHRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainSidebar.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_PartialViews/Core/_pMainSidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlld3NcQ29yZVxfcE1haW5TaWRlYmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_PartialViews/_pAlert.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_PartialViews/_pAlert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlld3NcX3BBbGVydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_PartialViews/_pCard.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_PartialViews/_pCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVmlld3NcX3BDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/_ViewImports.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/_ViewStart.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LulQu/source/repos/Ecboard/Ecboard/Views/Shared/_Layout.cshtml]
+[C:/Users/okanc/OneDrive/Masaüstü/Ecboard/Ecboard/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o2intmije5

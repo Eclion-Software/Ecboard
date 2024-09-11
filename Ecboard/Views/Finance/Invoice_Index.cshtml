@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Ecboard.Controllers
+@{
     ViewData["Title"] = "Invoice";
 }
 
@@ -54,7 +55,7 @@
                     <tr>
                         <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
                         <td><span class="text-secondary">001401</span></td>
-                        <td><a asp-controller="Invoice" asp-action="PrintInvoice"  class="text-reset" tabindex="-1">Game Developing</a></td>
+                        <td><a asp-controller="Finance" asp-action="@nameof(FinanceController.Print_Invoice)" class="text-reset" tabindex="-1">Game Developing</a></td>
                         <td>
                             <span class="flag flag-xs flag-country-tr me-2"></span>
                             Dostkad
@@ -86,7 +87,7 @@
                     <tr>
                         <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
                         <td><span class="text-secondary">001402</span></td>
-                        <td><a asp-controller ="Invoice" asp-action="PrintInvoice" class="text-reset" tabindex="-1">Biography Website</a></td>
+                        <td><a href="#" class="text-reset" tabindex="-1">Biography Website</a></td>
                         <td>
                             <span class="flag flag-xs flag-country-tr me-2"></span>
                             Osman Aykut Özalp
@@ -118,7 +119,7 @@
                     <tr>
                         <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
                         <td><span class="text-secondary">001403</span></td>
-                        <td><a asp-controller="Invoice" asp-action="PrintInvoice" class="text-reset" tabindex="-1">New Dashboard</a></td>
+                        <td><a href="#" class="text-reset" tabindex="-1">New Dashboard</a></td>
                         <td>
                             <span class="flag flag-xs flag-country-tr me-2"></span>
                             Bluewolf

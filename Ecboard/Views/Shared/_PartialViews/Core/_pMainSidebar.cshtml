@@ -1,4 +1,8 @@
-﻿<aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
+﻿@using Ecboard.Controllers
+
+
+
+<aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,7 +41,7 @@
                     <div class="dropdown-menu">
                         <div class="dropdown-menu-columns">
                             <div class="dropdown-menu-column">
-                                <a class="dropdown-item" asp-controller="Invoice" asp-action="Index">
+                                <a class="dropdown-item" asp-controller="Finance" asp-action="@nameof(FinanceController.InvoiceIndex)">
                                     Invoice
                                 </a>
                             </div>
