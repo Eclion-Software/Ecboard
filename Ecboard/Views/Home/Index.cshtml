@@ -61,12 +61,24 @@
             <div class="col-sm-6 col-lg-3">
                 <sub-card title="Order Shares" value="245" description="50 new orders" icon="ti ti-chart-pie" background-color="success"></sub-card>
             </div>
-
-
         </div>
     </div>
-
     </div>
 
+
+
+
+
+<sub-card-with-chart title="Revenue"
+                 dropdown-text="Last 7 days"
+                 chart-id="chart-revenue-bg"
+                 amount="$4,300"
+                 percentage-change="8">
+    <dropdown-items>
+        <dropdown-item text="Last 7 days" is-active="true" />
+        <dropdown-item text="Last 30 days" />
+        <dropdown-item text="Last 3 months" />
+    </dropdown-items>
+</sub-card-with-chart>
 
 

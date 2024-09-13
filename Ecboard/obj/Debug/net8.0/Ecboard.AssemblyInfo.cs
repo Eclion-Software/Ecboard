@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecboard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b05b57747f3688546c0112d8ff9c4c63250062c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acfc531d0297110cc866e98b93a31f914377c8af")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecboard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecboard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
