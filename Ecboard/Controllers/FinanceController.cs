@@ -35,6 +35,7 @@ namespace Ecboard.Controllers
             return this.AInvoices_Index();
         }
 
+
         public IActionResult Print_Invoice()
         {
             return this.APrintInvoices();
