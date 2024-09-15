@@ -1,0 +1,91 @@
+﻿@using Ecboard.ViewModels._PartialViews.TodoCard
+
+@model TodoCardViewModel
+@{
+}
+
+<style>
+    .ribbon-bookmark.ribbon-top:after {
+        width: 100%;
+    }
+
+    .icon{
+        font-size: 1.25rem;
+    }
+</style>
+
+<div class="card card-sm my-2">
+    <div class="card-status-top bg-@(Model.TopBorder)" style="height: 4px;"></div>
+    @if (Model.IsFavorite)
+    {
+        <div class="ribbon ribbon-top ribbon-bookmark bg-yellow">
+            <i class="ti ti-star icon"></i>
+        </div>
+    }
+    <div class="card-body">
+        <h3 class="card-title">@Model.Title</h3>
+        @if (!String.IsNullOrEmpty(Model.Description)) 
+        { 
+            <div class="text-secondary mb-2">@Model.Description</div> 
+        }
+        @if (!String.IsNullOrEmpty(Model.Banner))
+        {
+            <div class="ratio ratio-16x9">
+                <img src="@Model.Banner" class="rounded object-cover" alt="Code HTML email template for welcome email">
+            </div>
+        }
+        <div class="mt-4">
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col-auto text-secondary">
+                    <button class="switch-icon switch-icon-scale" data-bs-toggle="switch-icon">
+                        <span class="switch-icon-a text-muted">
+                            <i class="ti ti-heart icon"></i>
+                        </span>
+                        <span class="switch-icon-b text-red">
+                            <i class="ti ti-heart icon"></i>
+                        </span>
+                    </button>
+                    @Model.LikeCount
+                </div>
+                @if (Model.Comments.Count > 0)
+                {
+                    <div class="col-auto">
+                        <a href="#" class="link-muted">
+                            <i class="ti ti-message-2 icon"></i>
+                            @(Model.Comments?.Count)
+                        </a>
+                    </div>
+                }
+                <div class="col-auto">
+                    <a href="#" class="link-muted"> 
+                        <i class="ti ti-share icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        @if (Model.CheckList?.Count > 0)
+        {
+            <div class="divide-y-2 mt-4">
+                @foreach (var checklistitem in Model.CheckList)
+                {
+                    if (checklistitem.IsComplated)
+                    {
+                        <div>
+                            <i class="ti ti-check text-muted icon"></i>
+                            <span class="text-secondary text-decoration-line-through">@checklistitem.Name</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <div>
+                            <i class="ti ti-check text-green icon"></i>
+                            @checklistitem.Name
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</div>
