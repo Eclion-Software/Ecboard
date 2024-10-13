@@ -5704,24 +5704,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LulQu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\okanc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\Ecboard.csproj",
+      "projectUniqueName": "C:\\Users\\okanc\\Desktop\\GitUpload\\Ecboard\\Ecboard\\Ecboard.csproj",
       "projectName": "Ecboard",
-      "projectPath": "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\Ecboard.csproj",
-      "packagesPath": "C:\\Users\\LulQu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LulQu\\source\\repos\\Ecboard\\Ecboard\\obj\\",
+      "projectPath": "C:\\Users\\okanc\\Desktop\\GitUpload\\Ecboard\\Ecboard\\Ecboard.csproj",
+      "packagesPath": "C:\\Users\\okanc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\okanc\\Desktop\\GitUpload\\Ecboard\\Ecboard\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\LulQu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\okanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5777,7 +5772,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

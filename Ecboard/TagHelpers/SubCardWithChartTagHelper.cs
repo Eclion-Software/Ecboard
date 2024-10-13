@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Ecboard.Enums;
+using Ecboard.ViewModels;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using System.Drawing;
 
-using Ecboard.ViewModels;
+namespace Ecboard.TagHelpers;
 
 [HtmlTargetElement("sub-card-with-chart")]
 public class SubCardWithChartTagHelper : TagHelper
@@ -30,7 +33,10 @@ public class SubCardWithChartTagHelper : TagHelper
 
     public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
     {
-        // Create the ViewModel
+        // ViewContext'i IHtmlHelper ile bağdaştır
+        ((IViewContextAware)_htmlHelper).Contextualize(ViewContext);
+
+        // ViewModel oluştur
         var viewModel = new SubCardWithChartViewModel
         {
             Title = Title,
@@ -41,11 +47,11 @@ public class SubCardWithChartTagHelper : TagHelper
             DropdownItems = DropdownItems
         };
 
-        // Ensure the HtmlHelper is using the correct ViewContext
+        // Partial View'i render et
         var partialViewResult = await _htmlHelper.PartialAsync(
             "~/Views/Shared/_PartialViews/_pSubCardWithChart.cshtml", viewModel);
 
-
+        // Render edilen içeriği output'a aktar
         output.Content.SetHtmlContent(partialViewResult);
     }
 }
